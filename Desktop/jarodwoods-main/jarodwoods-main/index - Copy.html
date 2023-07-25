@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<title>CodePen - Breaking News Ticker</title>
+  
+	<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-4de243a40619a967c0bf13b95e1ac6f8de89d943b7fc8710de33f681fe287604.css">
+	
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+  <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+  
+	<title>CodePen - Breaking News Ticker</title>
+	<script>
+	if (document.location.search.match(/type=embed/gi)) {
+	  window.parent.postMessage("resize", "*");
+	}
+  </script>
+  
+  
+	<style>
+	  html { font-size: 15px; }
+	  html, body { margin: 0; padding: 0; min-height: 100%; }
+	  body { height:100%; display: flex; flex-direction: column; }
+	  .referer-warning {
+		background: black;
+		box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+		padding: 0.75em;
+		color: white;
+		text-align: center;
+		font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+		line-height: 1.2;
+		font-size: 1rem;
+		position: relative;
+		z-index: 2;
+	  }
+	  .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+	  .referer-warning a { color: #56bcf9; } /* $linkColorOnBlack */
+	</style>
+  </head>
+  
+  <body class="">
+	<div class="referer-warning">
+	  <h1>⚠️ Do not enter passwords or personal information on this page. ⚠️</h1>
+		This is a code demo posted by a web developer on <a href="https://codepen.io">codepen.io</a>.
+	  <br>
+	  A referer from CodePen is required to render this page view, and your browser is not sending one 
+	  (<a href="https://blog.codepen.io/2017/10/05/regarding-referer-headers/" target="_blank">more details</a>).
+	</div>
+  
+<div id="result-iframe-wrap" role="main">
+  
+<iframe id="result" srcdoc=" 
+
+	<!DOCTYPE HTML>
+  <html lang=&quot;en&quot;><head>
+  
+	<meta charset=&quot;UTF-8&quot;>
+	
+  <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; 
+  href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+  <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+  
+  <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; 
+  href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+  
+  <link rel=&quot;mask-icon&quot; type=&quot;&quot; 
+  href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+  
+	<title>CodePen - Breaking News Ticker</title>
+	<link href=&quot;https://fonts.googleapis.com/css?family=Fjalla+One&quot; rel=&quot;stylesheet&quot;>
+
+  <style>
+  body {
+	margin: 0;
+	font-family: &quot;Fjalla One&quot;, sans-serif;
+	overflow-x: hidden;
+  }
+  #breaking {
+	font-size: 25px;
+	font-weight: bold;
+	padding: 5px;
+	background: red;
+	color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+  }
+  #breaking,
+  #newsTicker {
+	border: 2px solid #000;
+  }
+  #newsTicker {
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0px 0px 8px 2px #000000;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 998;
+  }
+  .date {
+	margin-right: 10px;
+	text-decoration: underline;
+  }
+  .story {
+	margin-right: 20px;
+  }
+  #newsTicker p {
+	margin: 0;
+	display: inline-block;
+	font-size: 25px;
+	padding-left: 100%;
+	animation: tickerTape 60s linear infinite;
+  }
+  @keyframes tickerTape {
+	0% {
+	  transform: translate(0, 0);
+	}
+	100% {
+	  transform: translate(-100%, 0);
+	}
+  }
+  
+  .content {
+	position: absolute;
+	min-width: 100vw;
+	height: calc(100vh - 45px);
+	margin-top: 45px;
+	background: url(&quot;https://picsum.photos/g/1920/1080/?random&quot;);
+  }
+  
+  h1 {
+	text-align: center;
+	position: relative;
+	float: left;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	background: #fff;
+	border-radius: 8px;
+	border: 2px solid #000;
+	box-shadow: 0px 0px 8px 2px #000000;
+  }
+  </style>
+	<script>
+	window.console = window.console || function(t) {};
+  </script>
+ 
+	<script>
+	if (document.location.search.match(/type=embed/gi)) {window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+	}
+  </script>
+
+  </head>
+  
+  <body translate=&quot;no&quot; >
+	<div id=&quot;breaking&quot;>Breaking News</div>
+  <div id=&quot;newsTicker&quot;><p></p></div>
+  
+  <div class=&quot;content&quot;>
+	<h1>News Ticker</h1>
+  </div>
+	  <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js&quot;></script>
+  
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script id=&quot;rendered-js&quot; >
+  var newsItem = [
+  {&quot;date&quot;: &quot;05/16/18&quot;,
+	&quot;story&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&quot; },
+  
+  {&quot;date&quot;: &quot;05/13/18&quot;,
+	&quot;story&quot;: &quot;Sed quis mauris suscipit, vehicula lacus sit amet, volutpat libero. Curabitur nec scelerisque orci.&quot; },
+  
+  {&quot;date&quot;: &quot;04/28/18&quot;,
+	&quot;story&quot;: &quot;Praesent lacinia elit ut neque ornare vestibulum ac et dolor. Cras vel urna sed elit porta fringilla eget id nulla.&quot; },
+  
+  {&quot;date&quot;: &quot;04/19/18&quot;,
+	&quot;story&quot;: &quot;Praesent bibendum odio id euismod scelerisque. In tempor, ligula nec porta egestas, magna ipsum sodales libero, sit amet ultrices lorem ex vitae justo.&quot; },
+  
+  {&quot;date&quot;: &quot;04/12/18&quot;,
+	&quot;story&quot;: &quot;This is a news story 5.&quot; }];
+  for (i = 0; i < newsItem.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+	$(&quot;#newsTicker p&quot;).append(
+	&quot;<span class='date'>&quot; + newsItem[i].date + &quot;:</span>&quot; +
+	&quot;<span class='story'>&quot; + newsItem[i].story + &quot;</span>&quot;);
+  
+  }window.CP.exitedLoop(0);
+  //# sourceURL=pen.js
+	  </script>
+ 
+  </body>
+  
+  </html>
+
+  " sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation  allow-scripts allow-top-navigation-by-user-activation" allow="accelerometer; camera; encrypted-media; geolocation; gyroscope; microphone; midi" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+</iframe>
+</div>
+  </body></html>
+
+
+
