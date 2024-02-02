@@ -413,7 +413,7 @@ button,
     letter-spacing: normal;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform:  initial;
     white-space: nowrap;
     font-size: 1.7rem;
     max-width: fit-content;
