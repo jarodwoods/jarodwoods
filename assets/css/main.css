@@ -1176,7 +1176,7 @@ ul.icons {
 
 .border {
     overflow-y: scroll;
-    height: 63vh;
+    height: 60vh;
     border: 8px solid grey;
     padding: 1rem 1rem 1rem 1rem;
 }
