@@ -1163,7 +1163,7 @@ ul.icons {
     padding: 8px 8px 8px 8px;
     position: relative;
     text-align: center;
-    align-items: stretch;
+    align-items: center;
     -webkit-align-items: center;
     -webkit-justify-content: center;
     justify-content: inherit;
